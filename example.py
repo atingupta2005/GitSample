@@ -4,10 +4,10 @@
 
 def apply_async(func, args, *, callback):
     # Compute the result
-    result = func(*args)
+    result1 = func(*args)
 
     # Invoke the callback with the result
-    callback(result)
+    callback(result1)
 
 # A simple function for testing
 def add(x, y):
@@ -43,7 +43,7 @@ apply_async(add, ('hello', 'world'), callback=r.handler)
 print('# --- Using a closure')
 
 def make_handler():
-    sequence = 0
+    sequence = 1
     def handler(result):
         nonlocal sequence
         sequence += 1
