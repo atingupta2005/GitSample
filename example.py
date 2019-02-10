@@ -3,7 +3,7 @@
 # simple code emulates the typical control of a callback.
 
 def apply_async(func, args, *, callback):
-    # Compute the result
+    # Compute the result1
     result1 = func(*args)
 
     # Invoke the callback with the result
